@@ -223,22 +223,9 @@
         <div className="relative min-h-screen font-sans overflow-hidden p-4 flex flex-col items-center justify-center bg-gradient-to-br from-blue-200 to-green-100">
           
           {/* Background layer for daisies and water */}
-          <div className="absolute inset-0 z-0">
-            {/* Daisy Field */}
-            <Daisy scale={0.8} positionClass="bottom-16 left-10 md:left-24 lg:left-40" index={0} />
-            <Daisy scale={1} positionClass="bottom-20 right-20 md:right-40" index={1} />
-            <Daisy scale={0.9} positionClass="bottom-10 left-1/2 transform -translate-x-1/2" index={2} />
-            <Daisy scale={0.7} positionClass="bottom-24 left-1/4" index={3} />
-            <Daisy scale={0.6} positionClass="bottom-14 right-1/4" index={4} />
-            
-            {/* Water Source */}
-            <div ref={waterRef} className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent via-blue-200 to-blue-400 opacity-70">
-              <div className="absolute bottom-0 w-full h-full bg-blue-300 opacity-30 animate-pulse"></div>
-              {/* Animated water ripples */}
-              <div ref={el => rippleRefs.current[0] = el} className="absolute w-[120%] h-12 -left-10 bottom-10 bg-white opacity-20 blur-sm rounded-full"></div>
-              <div ref={el => rippleRefs.current[1] = el} className="absolute w-[110%] h-8 -right-5 bottom-20 bg-white opacity-20 blur-sm rounded-full"></div>
-            </div>
-          </div>
+          {/* <div className="absolute inset-0 z-0">
+            Daisy and water background moved to React component
+          </div> */}
 
           {/* Main Content Area */}
           <div ref={mainContentRef} className="flex flex-col items-center justify-center p-8 bg-white/30 backdrop-blur-sm rounded-3xl shadow-xl z-10 w-full max-w-2xl transform transition-transform duration-500 hover:scale-[1.01]">
